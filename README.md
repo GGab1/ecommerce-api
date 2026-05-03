@@ -127,20 +127,11 @@ Swagger : http://localhost:3000/api-docs
 
 ## 🗄️ Base de données
 
+- Modélisation relationnelle
+- Tables : products, orders
+- Relation entre données
+
 La base est automatiquement créée via Docker.
-
-Tables :
-
-- products
-- id
-- name
-- price
-- stock
-- orders
-- id
-- product_id
-- quantity
-- created_at
 
 ---
 
