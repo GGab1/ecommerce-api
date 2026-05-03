@@ -66,6 +66,27 @@ Authorization: Bearer VOTRE_TOKEN
 - PUT `/products/:id` → modifier un produit 🔐
 - DELETE `/products/:id` → supprimer un produit 🔐
 
+## Exemple d'utilisation
+
+### Ajouter un produit
+
+POST /products
+
+```json
+{
+  "name": "Produit test",
+  "price": 20,
+  "stock": 5
+```
+
+### Réponse
+
+```json
+{
+  "id": 1,
+  "name": "Produit test"
+```
+
 ---
 
 ## 🛒 Commandes
