@@ -1,6 +1,7 @@
 # 🛒 E-commerce API — Projet MIAGE
 
-API REST complète de gestion de produits et de commandes avec authentification JWT et documentation Swagger.
+API REST complète de gestion de produits et de commandes avec authentification JWT et documentation Swagger.  
+Le projet est entièrement conteneurisé avec Docker (API + base de données).
 
 ---
 
@@ -21,10 +22,10 @@ Ce projet simule un système d’information e-commerce permettant :
 
 - Node.js
 - Express.js
-- MySQL
+- MySQL (via Docker)
 - JWT (authentification)
 - Swagger (OpenAPI)
-- phpMyAdmin (gestion base de données)
+- Docker / Docker Compose
 
 ---
 
@@ -37,7 +38,7 @@ Ce projet simule un système d’information e-commerce permettant :
 - Authentification sécurisée avec JWT
 - Middleware Express
 - Documentation API avec Swagger (OpenAPI)
-- Gestion de logique métier (gestion de stock)
+- Conteneurisation avec Docker
 
 ---
 
@@ -52,7 +53,8 @@ Certaines routes sont protégées par JWT.
 
 ### Utilisation du token
 
-Dans les headers : Authorization: Bearer VOTRE_TOKEN
+Dans les headers :
+Authorization: Bearer VOTRE_TOKEN
 
 ---
 
@@ -73,17 +75,45 @@ Dans les headers : Authorization: Bearer VOTRE_TOKEN
 
 ---
 
+## 🐳 LANCEMENT AVEC DOCKER (RECOMMANDÉ)
+
+Le projet est entièrement conteneurisé.
+
+### ✔ Prérequis
+
+- Docker Desktop installé
+
+### 🚀 Étapes
+
+```bash
+git clone https://github.com/GGab1/ecommerce-api-miage.git
+cd ecommerce-api-miage
+docker compose up --build
+```
+
+---
+
+## 🌐 ACCÈS AU PROJET
+
+Une fois lancé :
+
+API : http://localhost:3000
+Swagger : http://localhost:3000/api-docs
+
+---
+
 ## 🗄️ Base de données
 
-### products
+La base est automatiquement créée via Docker.
 
+Tables :
+
+- products
 - id
 - name
 - price
 - stock
-
-### orders
-
+- orders
 - id
 - product_id
 - quantity
@@ -93,24 +123,10 @@ Dans les headers : Authorization: Bearer VOTRE_TOKEN
 
 ## 🔗 Logique métier
 
-- Vérification du stock avant création de commande
+- Vérification du stock avant commande
 - Mise à jour automatique du stock après commande
 - Relations entre produits et commandes
 - Sécurisation des opérations critiques
-
----
-
-## 📄 Documentation API
-
-L’API est documentée avec Swagger :
-
-👉 http://localhost:3000/api-docs
-
-Fonctionnalités :
-
-- test des routes directement dans le navigateur
-- visualisation des endpoints
-- exécution des requêtes sans Postman
 
 ---
 
@@ -123,23 +139,6 @@ API testée avec :
 
 ---
 
-## ⚙️ Installation
-
-```bash
-npm install
-node src/server.js
-```
-
----
-
-## 🚀 Lancement rapide
-
-git clone https://github.com/GGab1/ecommerce-api-miage
-npm install
-node src/server.js
-
----
-
 ## 🎯 Apports du projet
 
 Ce projet m’a permis de développer :
@@ -149,3 +148,4 @@ Ce projet m’a permis de développer :
 - la sécurité backend avec JWT
 - la structuration d’une application backend
 - la documentation technique d’une API
+- la conteneurisation d’une application complète avec Docker
