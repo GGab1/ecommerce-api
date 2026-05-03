@@ -132,6 +132,14 @@ node src/server.js
 
 ---
 
+## 🚀 Lancement rapide
+
+git clone https://github.com/GGab1/ecommerce-api-miage
+npm install
+node src/server.js
+
+---
+
 ## 🎯 Apports du projet
 
 Ce projet m’a permis de développer :
