@@ -77,6 +77,7 @@ POST /products
   "name": "Produit test",
   "price": 20,
   "stock": 5
+}
 ```
 
 ### Réponse
@@ -85,6 +86,7 @@ POST /products
 {
   "id": 1,
   "name": "Produit test"
+}
 ```
 
 ---
