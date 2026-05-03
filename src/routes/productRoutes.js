@@ -8,6 +8,7 @@ const productController = require("../controllers/productController");
  * /products:
  *   get:
  *     summary: Récupère tous les produits
+ *     tags: [Products]
  *     responses:
  *       200:
  *         description: Liste des produits
@@ -19,6 +20,7 @@ router.get("/", productController.getProducts);
  * /products/{id}:
  *   get:
  *     summary: Récupère un produit par ID
+ *     tags: [Products]
  *     parameters:
  *       - in: path
  *         name: id
@@ -28,6 +30,7 @@ router.get("/", productController.getProducts);
  *     responses:
  *       200:
  *         description: Produit trouvé
+ *         tags: [Products]
  */
 router.get("/:id", productController.getProductById);
 
@@ -36,6 +39,7 @@ router.get("/:id", productController.getProductById);
  * /products:
  *   post:
  *     summary: Crée un produit
+ *     tags: [Products]
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -66,6 +70,7 @@ router.post("/", auth, productController.createProduct);
  * /products/{id}:
  *   put:
  *     summary: Met à jour un produit
+ *     tags: [Products]
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -105,6 +110,7 @@ router.put("/:id", auth, productController.updateProduct);
  * /products/{id}:
  *   delete:
  *     summary: Supprime un produit
+ *     tags: [Products]
  *     security:
  *       - bearerAuth: []
  *     parameters:
