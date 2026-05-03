@@ -137,7 +137,8 @@ La base est automatiquement créée via Docker.
 
 ## 🔗 Logique métier
 
-- Vérification du stock avant commande
+- Vérification du stock avant validation d'une commande
+- Refus automatique si quantité indisponible
 - Mise à jour automatique du stock après commande
 - Relations entre produits et commandes
 - Sécurisation des opérations critiques
