@@ -14,7 +14,7 @@ Ce projet simule un système d’information e-commerce permettant :
 - la sécurisation des actions sensibles
 - la documentation complète de l’API
 
-👉 Objectif pédagogique : renforcer mes compétences en développement backend, bases de données et architecture de systèmes d’information dans le cadre d’une candidature en MIAGE.
+👉 Objectif pédagogique : renforcer mes compétences en développement backend, bases de données et architecture des systèmes d’information dans le cadre de mon parcours en informatique.
 
 ---
 
